@@ -19,6 +19,7 @@
 		EC0C0C9A1FAB9D1500F4A1F6 /* DictionaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C0C991FAB9D1500F4A1F6 /* DictionaryController.swift */; };
 		EC0C0C9C1FAB9D7000F4A1F6 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C0C9B1FAB9D7000F4A1F6 /* ProfileController.swift */; };
 		EC0C0C9E1FABA9D800F4A1F6 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C0C9D1FABA9D800F4A1F6 /* TabBarController.swift */; };
+		ECDA7E841FB3A045003749AA /* logo WITHOUT background.png in Resources */ = {isa = PBXBuildFile; fileRef = ECDA7E831FB3A045003749AA /* logo WITHOUT background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		EC0C0C991FAB9D1500F4A1F6 /* DictionaryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryController.swift; sourceTree = "<group>"; };
 		EC0C0C9B1FAB9D7000F4A1F6 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		EC0C0C9D1FABA9D800F4A1F6 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		ECDA7E831FB3A045003749AA /* logo WITHOUT background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo WITHOUT background.png"; path = "Assets.xcassets/logo WITHOUT background.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				EC0C0C6A1FAB908C00F4A1F6 /* Assets.xcassets */,
 				EC0C0C6C1FAB908C00F4A1F6 /* LaunchScreen.storyboard */,
 				EC0C0C6F1FAB908C00F4A1F6 /* Info.plist */,
+				ECDA7E831FB3A045003749AA /* logo WITHOUT background.png */,
 			);
 			path = ChaseApp;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 			files = (
 				EC0C0C6E1FAB908C00F4A1F6 /* LaunchScreen.storyboard in Resources */,
 				EC0C0C6B1FAB908C00F4A1F6 /* Assets.xcassets in Resources */,
+				ECDA7E841FB3A045003749AA /* logo WITHOUT background.png in Resources */,
 				EC0C0C691FAB908C00F4A1F6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,6 +531,7 @@
 				EC0C0C8A1FAB908C00F4A1F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC0C0C8B1FAB908C00F4A1F6 /* Build configuration list for PBXNativeTarget "ChaseAppTests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +540,7 @@
 				EC0C0C8D1FAB908C00F4A1F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC0C0C8E1FAB908C00F4A1F6 /* Build configuration list for PBXNativeTarget "ChaseAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -543,6 +549,7 @@
 				EC0C0C901FAB908C00F4A1F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

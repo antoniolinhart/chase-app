@@ -31,7 +31,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="second" id="BZW-8X-ZDb" userLabel="Profile"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="user_male" id="BZW-8X-ZDb" userLabel="Profile"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V6n-Ir-Na8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,7 +81,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Messaging" image="first" id="HjE-E6-VBU" userLabel="Messaging"/>
+                    <tabBarItem key="tabBarItem" title="Messaging" image="chat" id="HjE-E6-VBU" userLabel="Messaging"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kJX-kY-JQi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -109,7 +109,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Dictionary" image="first" id="FIj-7G-3SH" userLabel="Dictionary"/>
+                    <tabBarItem key="tabBarItem" title="Dictionary" image="literature" id="FIj-7G-3SH" userLabel="Dictionary"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QBy-zt-8Te" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -137,7 +137,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Main Menu" image="second" id="U6I-Rf-mHi" userLabel="Main Menu"/>
+                    <tabBarItem key="tabBarItem" title="Main Menu" image="home" id="U6I-Rf-mHi" userLabel="Main Menu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Paf-fq-feR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -165,7 +165,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Calendar" image="second" id="eF3-bR-CIc" userLabel="Calendar"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar" id="eF3-bR-CIc" userLabel="Calendar"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4T5-Ks-5sl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -173,7 +173,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="calendar" width="30" height="30"/>
+        <image name="chat" width="30" height="30"/>
+        <image name="home" width="30" height="30"/>
+        <image name="literature" width="30" height="30"/>
+        <image name="user_male" width="30" height="30"/>
     </resources>
 </document>
