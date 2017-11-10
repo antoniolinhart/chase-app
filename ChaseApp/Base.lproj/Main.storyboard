@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -127,15 +128,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Main Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dt5-bf-NMo">
-                                <rect key="frame" x="166" y="233" width="94" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Main Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dt5-bf-NMo">
+                                <rect key="frame" x="61" y="47" width="252" height="63"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo WITHOUT background.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Ci-rO-sQw">
+                                <rect key="frame" x="39" y="103" width="296" height="296"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lz-r4-spj">
+                                <rect key="frame" x="21" y="449" width="333" height="82"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="Fab-Wl-nCr"/>
+                                </constraints>
+                                <string key="text">Welcome to the Project P.E.A.R. App! To visit the C.H.A.S.E. website, tap the link below, or tap one of the icons to get started!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zma-bN-XFj">
+                                <rect key="frame" x="61" y="148" width="237" height="243"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sendToWeb:" destination="64d-wZ-l3f" eventType="touchUpInside" id="K0D-e5-5Sp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dt5-bf-NMo" firstAttribute="top" secondItem="Dal-Mf-eOn" secondAttribute="bottom" constant="27" id="KSK-Dt-aKn"/>
+                            <constraint firstItem="0Ci-rO-sQw" firstAttribute="leading" secondItem="gAA-3g-nsP" secondAttribute="leadingMargin" constant="23" id="Lr1-7s-vrt"/>
+                            <constraint firstItem="0Ci-rO-sQw" firstAttribute="top" secondItem="Dal-Mf-eOn" secondAttribute="bottom" constant="83" id="NF5-Wy-sC0"/>
+                            <constraint firstItem="0Ci-rO-sQw" firstAttribute="centerX" secondItem="8lz-r4-spj" secondAttribute="centerX" id="VTl-aX-TT7"/>
+                            <constraint firstItem="8lz-r4-spj" firstAttribute="leading" secondItem="gAA-3g-nsP" secondAttribute="leadingMargin" constant="5" id="dFg-Qx-tN0"/>
+                            <constraint firstItem="Dt5-bf-NMo" firstAttribute="centerX" secondItem="0Ci-rO-sQw" secondAttribute="centerX" id="hRd-5v-JKX"/>
+                            <constraint firstItem="e5x-lz-Huu" firstAttribute="top" secondItem="8lz-r4-spj" secondAttribute="bottom" constant="87" id="jwm-PL-a6G"/>
+                            <constraint firstItem="Dt5-bf-NMo" firstAttribute="centerX" secondItem="gAA-3g-nsP" secondAttribute="centerX" id="ozb-3D-H8c"/>
+                            <constraint firstItem="8lz-r4-spj" firstAttribute="top" secondItem="0Ci-rO-sQw" secondAttribute="bottom" constant="50" id="xcQ-Yr-fVY"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Main Menu" image="home" id="U6I-Rf-mHi" userLabel="Main Menu"/>
                 </viewController>
@@ -177,6 +208,7 @@
         <image name="chat" width="30" height="30"/>
         <image name="home" width="30" height="30"/>
         <image name="literature" width="30" height="30"/>
+        <image name="logo WITHOUT background.png" width="720" height="720"/>
         <image name="user_male" width="30" height="30"/>
     </resources>
 </document>
