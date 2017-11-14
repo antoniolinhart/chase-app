@@ -100,8 +100,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dictionary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyE-nH-AGO">
-                                <rect key="frame" x="166" y="285" width="78" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Definition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzv-6o-0KK">
+                                <rect key="frame" x="116" y="296" width="119" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1w6-bS-gBN">
+                                <rect key="frame" x="162" y="461" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="DO IT"/>
+                                <connections>
+                                    <action selector="changeTest:" destination="wX8-Ro-E1N" eventType="touchUpInside" id="eMb-iW-ZIF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyE-nH-AGO">
+                                <rect key="frame" x="116" y="199" width="97" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -111,6 +126,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dictionary" image="literature" id="FIj-7G-3SH" userLabel="Dictionary"/>
+                    <connections>
+                        <outlet property="testField" destination="yzv-6o-0KK" id="9pK-WA-MvY"/>
+                        <outlet property="wordField" destination="wyE-nH-AGO" id="GM4-eB-kdT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QBy-zt-8Te" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -147,20 +166,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zma-bN-XFj">
-                                <rect key="frame" x="61" y="148" width="237" height="243"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hfj-0s-2j2">
+                                <rect key="frame" x="159" y="539" width="56" height="30"/>
+                                <state key="normal" title="Website"/>
                                 <connections>
-                                    <action selector="sendToWeb:" destination="64d-wZ-l3f" eventType="touchUpInside" id="K0D-e5-5Sp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovi-n9-eqF">
-                                <rect key="frame" x="114" y="539" width="147" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="C.H.A.S.E. Website"/>
-                                <connections>
-                                    <action selector="linkButton:" destination="64d-wZ-l3f" eventType="touchUpInside" id="ESS-sE-gEg"/>
+                                    <action selector="goToWeb:" destination="64d-wZ-l3f" eventType="touchUpInside" id="iKa-B2-wuI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -168,8 +178,10 @@
                         <constraints>
                             <constraint firstItem="Dt5-bf-NMo" firstAttribute="top" secondItem="Dal-Mf-eOn" secondAttribute="bottom" constant="27" id="KSK-Dt-aKn"/>
                             <constraint firstItem="0Ci-rO-sQw" firstAttribute="leading" secondItem="gAA-3g-nsP" secondAttribute="leadingMargin" constant="23" id="Lr1-7s-vrt"/>
+                            <constraint firstItem="Hfj-0s-2j2" firstAttribute="centerX" secondItem="8lz-r4-spj" secondAttribute="centerX" id="MxS-dd-wcO"/>
                             <constraint firstItem="0Ci-rO-sQw" firstAttribute="top" secondItem="Dal-Mf-eOn" secondAttribute="bottom" constant="83" id="NF5-Wy-sC0"/>
                             <constraint firstItem="0Ci-rO-sQw" firstAttribute="centerX" secondItem="8lz-r4-spj" secondAttribute="centerX" id="VTl-aX-TT7"/>
+                            <constraint firstItem="Hfj-0s-2j2" firstAttribute="top" secondItem="8lz-r4-spj" secondAttribute="bottom" constant="8" symbolic="YES" id="bmo-6Z-UtK"/>
                             <constraint firstItem="8lz-r4-spj" firstAttribute="leading" secondItem="gAA-3g-nsP" secondAttribute="leadingMargin" constant="5" id="dFg-Qx-tN0"/>
                             <constraint firstItem="Dt5-bf-NMo" firstAttribute="centerX" secondItem="0Ci-rO-sQw" secondAttribute="centerX" id="hRd-5v-JKX"/>
                             <constraint firstItem="e5x-lz-Huu" firstAttribute="top" secondItem="8lz-r4-spj" secondAttribute="bottom" constant="87" id="jwm-PL-a6G"/>

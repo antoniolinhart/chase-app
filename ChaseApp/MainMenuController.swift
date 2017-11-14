@@ -9,11 +9,12 @@
 import UIKit
 
 class MainMenuController: UIViewController {
-
-    @IBAction func linkButton(_ sender: Any) {
-        
-    }
     
+    @IBAction func goToWeb(_ sender: Any) {
+        if let url = NSURL(string: "https://www.chasekc.org"){
+            UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,11 +23,9 @@ class MainMenuController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    @IBAction func sendToWeb(_ sender: UIButton) {
-        
-    }
+    
+
     
 
     /*

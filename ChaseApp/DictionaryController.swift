@@ -9,10 +9,20 @@
 import UIKit
 
 class DictionaryController: UIViewController {
-
+    var words = [String]()
+    var definitions = [String]()
+    
+    var street: String = "5th avenue"
+    @IBOutlet var testField: UILabel!
+    @IBOutlet var wordField: UILabel!
+    @IBAction func changeTest(_ sender: Any) {
+        
+        wordField.text = words[0]
+        testField.text = definitions[0]
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        addWordDefs(word: "lit", def: "sick")
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +31,11 @@ class DictionaryController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func addWordDefs(word: String, def: String){
+        words.append(word)
+        definitions.append(def)
+        
+    }
     /*
     // MARK: - Navigation
 
