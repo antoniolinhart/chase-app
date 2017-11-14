@@ -154,6 +154,15 @@
                                     <action selector="sendToWeb:" destination="64d-wZ-l3f" eventType="touchUpInside" id="K0D-e5-5Sp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovi-n9-eqF">
+                                <rect key="frame" x="114" y="539" width="147" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="C.H.A.S.E. Website"/>
+                                <connections>
+                                    <action selector="linkButton:" destination="64d-wZ-l3f" eventType="touchUpInside" id="ESS-sE-gEg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>

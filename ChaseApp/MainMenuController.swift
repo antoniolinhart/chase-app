@@ -10,6 +10,10 @@ import UIKit
 
 class MainMenuController: UIViewController {
 
+    @IBAction func linkButton(_ sender: Any) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
