@@ -97,43 +97,81 @@
                         <viewControllerLayoutGuide type="bottom" id="nS2-Za-CGC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Phy-Pv-GXo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Definition" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzv-6o-0KK">
-                                <rect key="frame" x="116" y="296" width="119" height="94"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1w6-bS-gBN">
-                                <rect key="frame" x="162" y="461" width="40" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="DO IT"/>
-                                <connections>
-                                    <action selector="changeTest:" destination="wX8-Ro-E1N" eventType="touchUpInside" id="eMb-iW-ZIF"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wyE-nH-AGO">
-                                <rect key="frame" x="116" y="199" width="97" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eka-db-KD2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="951"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jFT-Zh-aCg">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="951"/>
+                                        <subviews>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="hZx-bT-msP">
+                                                <rect key="frame" x="101" y="46" width="173" height="29"/>
+                                                <segments>
+                                                    <segment title="Pick a Word"/>
+                                                    <segment title="Definition"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="changeSeg:" destination="wX8-Ro-E1N" eventType="valueChanged" id="99E-sP-Jvq"/>
+                                                </connections>
+                                            </segmentedControl>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgb-Tf-J6G">
+                                                <rect key="frame" x="166" y="465" width="42" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLp-cY-zuI">
+                                                <rect key="frame" x="158" y="847" width="58" height="38"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="38" id="kdy-BS-guB"/>
+                                                    <constraint firstAttribute="width" constant="58" id="qy5-I7-y9a"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="hZx-bT-msP" firstAttribute="centerX" secondItem="mgb-Tf-J6G" secondAttribute="centerX" id="6tq-xb-d4I"/>
+                                            <constraint firstItem="hZx-bT-msP" firstAttribute="top" secondItem="jFT-Zh-aCg" secondAttribute="top" constant="46" id="YJI-iC-o8M"/>
+                                            <constraint firstItem="mgb-Tf-J6G" firstAttribute="centerX" secondItem="jFT-Zh-aCg" secondAttribute="centerX" id="Z5Y-Fw-EHF"/>
+                                            <constraint firstItem="mgb-Tf-J6G" firstAttribute="centerY" secondItem="jFT-Zh-aCg" secondAttribute="centerY" id="Zyh-nA-4aO"/>
+                                            <constraint firstItem="mgb-Tf-J6G" firstAttribute="centerX" secondItem="yLp-cY-zuI" secondAttribute="centerX" id="aXU-hf-f50"/>
+                                            <constraint firstAttribute="bottom" secondItem="yLp-cY-zuI" secondAttribute="bottom" constant="66" id="t9H-qx-wIB"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="jFT-Zh-aCg" firstAttribute="centerX" secondItem="eka-db-KD2" secondAttribute="centerX" id="0C0-31-jZu"/>
+                                    <constraint firstAttribute="trailing" secondItem="jFT-Zh-aCg" secondAttribute="trailing" id="4mh-zd-M8o"/>
+                                    <constraint firstAttribute="bottom" secondItem="jFT-Zh-aCg" secondAttribute="bottom" id="94N-HD-o9J"/>
+                                    <constraint firstItem="jFT-Zh-aCg" firstAttribute="centerY" secondItem="eka-db-KD2" secondAttribute="centerY" id="App-r0-1L5"/>
+                                    <constraint firstItem="jFT-Zh-aCg" firstAttribute="leading" secondItem="eka-db-KD2" secondAttribute="leading" id="cKw-qK-uA8"/>
+                                    <constraint firstItem="jFT-Zh-aCg" firstAttribute="top" secondItem="eka-db-KD2" secondAttribute="top" id="vRQ-qq-KQB"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eka-db-KD2" firstAttribute="top" secondItem="Phy-Pv-GXo" secondAttribute="top" id="HeU-nr-YUh"/>
+                            <constraint firstAttribute="trailing" secondItem="eka-db-KD2" secondAttribute="trailing" id="PRB-nW-Swk"/>
+                            <constraint firstItem="eka-db-KD2" firstAttribute="bottom" secondItem="nS2-Za-CGC" secondAttribute="top" id="XZh-JA-T4c"/>
+                            <constraint firstItem="eka-db-KD2" firstAttribute="leading" secondItem="Phy-Pv-GXo" secondAttribute="leading" id="i9n-vd-DIp"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dictionary" image="literature" id="FIj-7G-3SH" userLabel="Dictionary"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1000"/>
                     <connections>
-                        <outlet property="testField" destination="yzv-6o-0KK" id="9pK-WA-MvY"/>
-                        <outlet property="wordField" destination="wyE-nH-AGO" id="GM4-eB-kdT"/>
+                        <outlet property="segControl" destination="hZx-bT-msP" id="n1P-jZ-xMx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QBy-zt-8Te" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1256.8" y="236.13193403298354"/>
+            <point key="canvasLocation" x="1448.8" y="29.685157421289357"/>
         </scene>
         <!--MainMenu-->
         <scene sceneID="qKc-nQ-UW4">

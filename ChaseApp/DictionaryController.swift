@@ -11,18 +11,35 @@ import UIKit
 class DictionaryController: UIViewController {
     var words = [String]()
     var definitions = [String]()
+    //@IBOutlet var testField: UILabel!
+    //@IBOutlet var wordField: UILabel!
+    @IBOutlet var segControl: UISegmentedControl!
     
-    var street: String = "5th avenue"
-    @IBOutlet var testField: UILabel!
-    @IBOutlet var wordField: UILabel!
+    @IBOutlet var changingText: UILabel!
+    
+    @IBAction func changeSeg(_ sender: Any) {
+        
+        if segControl.selectedSegmentIndex == 0 {
+            //testField.text = "yo yo yo"
+            
+        }
+        if segControl.selectedSegmentIndex == 1 {
+            //testField.text = "no no no"
+            //wordField.text = ""
+        }
+        
+    }
+    
+
     @IBAction func changeTest(_ sender: Any) {
         
-        wordField.text = words[0]
-        testField.text = definitions[0]
+        //wordField.text = words[0]
+        //testField.text = definitions[0]
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         addWordDefs(word: "lit", def: "sick")
+        //testField.text = "hihihi"
         // Do any additional setup after loading the view.
     }
 
