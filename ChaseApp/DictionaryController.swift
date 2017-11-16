@@ -8,14 +8,13 @@
 
 import UIKit
 
-class DictionaryController: UIViewController {
+class DictionaryController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var words = [String]()
     var definitions = [String]()
-    //@IBOutlet var testField: UILabel!
-    //@IBOutlet var wordField: UILabel!
     @IBOutlet var segControl: UISegmentedControl!
+    @IBOutlet var tableView: UITableView!
     
-    @IBOutlet var changingText: UILabel!
+    
     
     @IBAction func changeSeg(_ sender: Any) {
         
@@ -29,7 +28,19 @@ class DictionaryController: UIViewController {
         }
         
     }
-    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return words.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellWord", for: indexPath)
+        
+        let word = words[indexPath.row]
+        let def = definitions[indexPath.row]
+        
+        cell.textLabel?.text = word + ":   " + def
+        return cell
+    }
 
     @IBAction func changeTest(_ sender: Any) {
         
@@ -38,7 +49,25 @@ class DictionaryController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        addWordDefs(word: "lit", def: "sick")
+        addWordDefs(word: "lit", def: "exciting")
+        addWordDefs(word: "lol", def: "laughing out loud")
+        addWordDefs(word: "bet", def: "yes or I agree")
+        addWordDefs(word: "banger", def: "a big party")
+        addWordDefs(word: "dope", def: "cool or very good")
+        addWordDefs(word: "good vibes", def: "happy feelings")
+        addWordDefs(word: "dm", def: "direct message")
+        addWordDefs(word: "insta", def: "instagram")
+        addWordDefs(word: "finsta", def: "fake instagram - used to post embarassing photos")
+        addWordDefs(word: "squad", def: "A crew, posse, gang: a group of friends, usually with a common identity or interest")
+        addWordDefs(word: "yeet", def: "term used to express excitement")
+        addWordDefs(word: "fleek", def: "used to describe when something is 'on point")
+        addWordDefs(word: "whip", def: "a dance move or term used when something is cool")
+        addWordDefs(word: "swag", def: "term used for the word 'cool'")
+        addWordDefs(word: "burn", def: "An exclamation used to imply that one has just been insulted with no chance of rebuttal")
+        addWordDefs(word: "roast", def: "To humorously mock or humiliate someone with a well-timed joke, diss, or comeback")
+        //nah
+        //words.sort()
+        //definitions.sort()
         //testField.text = "hihihi"
         // Do any additional setup after loading the view.
     }
