@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC0612841FCDF6BF005E22DD /* profilepic02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC0612831FCDF6BF005E22DD /* profilepic02.jpg */; };
+		EC0A740B1FCB774B00660C83 /* profilepic01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EC0A740A1FCB774B00660C83 /* profilepic01.jpg */; };
 		EC0C0C621FAB908C00F4A1F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0C0C611FAB908C00F4A1F6 /* AppDelegate.swift */; };
 		EC0C0C691FAB908C00F4A1F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC0C0C671FAB908C00F4A1F6 /* Main.storyboard */; };
 		EC0C0C6B1FAB908C00F4A1F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC0C0C6A1FAB908C00F4A1F6 /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC0612831FCDF6BF005E22DD /* profilepic02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = profilepic02.jpg; path = Assets.xcassets/profilepic02.jpg; sourceTree = "<group>"; };
+		EC0A740A1FCB774B00660C83 /* profilepic01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = profilepic01.jpg; path = Assets.xcassets/profilepic01.jpg; sourceTree = "<group>"; };
 		EC0C0C5E1FAB908C00F4A1F6 /* ChaseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChaseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC0C0C611FAB908C00F4A1F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC0C0C681FAB908C00F4A1F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				EC0C0C6C1FAB908C00F4A1F6 /* LaunchScreen.storyboard */,
 				EC0C0C6F1FAB908C00F4A1F6 /* Info.plist */,
 				ECDA7E831FB3A045003749AA /* logo WITHOUT background.png */,
+				EC0A740A1FCB774B00660C83 /* profilepic01.jpg */,
+				EC0612831FCDF6BF005E22DD /* profilepic02.jpg */,
 			);
 			path = ChaseApp;
 			sourceTree = "<group>";
@@ -253,6 +259,8 @@
 				EC0C0C6E1FAB908C00F4A1F6 /* LaunchScreen.storyboard in Resources */,
 				EC0C0C6B1FAB908C00F4A1F6 /* Assets.xcassets in Resources */,
 				ECDA7E841FB3A045003749AA /* logo WITHOUT background.png in Resources */,
+				EC0A740B1FCB774B00660C83 /* profilepic01.jpg in Resources */,
+				EC0612841FCDF6BF005E22DD /* profilepic02.jpg in Resources */,
 				EC0C0C691FAB908C00F4A1F6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,17 +23,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLN-ru-Ibs">
-                                <rect key="frame" x="166" y="232" width="49" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xRr-Bh-0af">
+                                <rect key="frame" x="116" y="47" width="143" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="KcF-p5-v6q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_male" translatesAutoresizingMaskIntoConstraints="NO" id="WpZ-tQ-Wd9">
+                                <rect key="frame" x="117" y="118" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WpZ-tQ-Wd9" secondAttribute="height" multiplier="1:1" id="6g6-KM-dhh"/>
+                                    <constraint firstAttribute="width" constant="140" id="QIK-RJ-lZB"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WpZ-tQ-Wd9" firstAttribute="centerX" secondItem="J3T-O9-geL" secondAttribute="centerX" id="96f-TV-bo2"/>
+                            <constraint firstItem="WpZ-tQ-Wd9" firstAttribute="top" secondItem="xRr-Bh-0af" secondAttribute="bottom" constant="8" symbolic="YES" id="YAD-Ly-7UN"/>
+                            <constraint firstItem="xRr-Bh-0af" firstAttribute="centerX" secondItem="WpZ-tQ-Wd9" secondAttribute="centerX" id="cFh-5c-xGX"/>
+                            <constraint firstItem="xRr-Bh-0af" firstAttribute="top" secondItem="5RY-g8-EyO" secondAttribute="bottom" constant="27" id="rwl-Pc-OLS"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="user_male" id="BZW-8X-ZDb" userLabel="Profile"/>
+                    <connections>
+                        <outlet property="profilePic" destination="WpZ-tQ-Wd9" id="QAI-Lc-bgd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V6n-Ir-Na8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

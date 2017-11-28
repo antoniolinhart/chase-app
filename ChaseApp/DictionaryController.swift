@@ -39,6 +39,7 @@ class DictionaryController: UIViewController, UITableViewDataSource, UITableView
         let def = definitions[indexPath.row]
         
         cell.textLabel?.text = word + ":   " + def
+        cell.textLabel?.numberOfLines = 0
         return cell
     }
 
@@ -65,11 +66,7 @@ class DictionaryController: UIViewController, UITableViewDataSource, UITableView
         addWordDefs(word: "swag", def: "term used for the word 'cool'")
         addWordDefs(word: "burn", def: "An exclamation used to imply that one has just been insulted with no chance of rebuttal")
         addWordDefs(word: "roast", def: "To humorously mock or humiliate someone with a well-timed joke, diss, or comeback")
-        //nah
-        //words.sort()
-        //definitions.sort()
-        //testField.text = "hihihi"
-        // Do any additional setup after loading the view.
+
     }
 
     override func didReceiveMemoryWarning() {
