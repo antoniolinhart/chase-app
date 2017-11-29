@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import JTAppleCalendar
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
