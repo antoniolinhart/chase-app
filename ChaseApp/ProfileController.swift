@@ -1,4 +1,4 @@
-//
+///Users/amlinhart/Library/Containers/com.apple.QuickTimePlayerX/Data/Library/Autosave Information/Unsaved QuickTime Player Document.qtpxcomposition/Screen Recording.mov
 //  ProfileController.swift
 //  ChaseApp
 //
@@ -11,10 +11,14 @@ import UIKit
 class ProfileController: UIViewController {
 
     @IBOutlet weak var profilePic: UIImageView!
-    
+    @IBOutlet weak var userField: UILabel!
+    @IBOutlet weak var eventLabel1: UILabel!
+    @IBOutlet weak var eventLabel2: UILabel!
 
     var profileImage = "profilepic02.jpg"
     var username = "PairOfPairs"
+    var event1 = "December 1st @ 2:00 PM - Meeting at CAPS"
+    var event2 = "December 15th @ 1:30 PM - Video Chat with CAPS Students"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +28,9 @@ class ProfileController: UIViewController {
         profilePic.layer.borderWidth = 2.5
         profilePic.layer.borderColor = UIColor.black.cgColor
         profilePic.clipsToBounds = true
-        //userField.text = username
+        userField.text = username
+        eventLabel1.text = event1
+        eventLabel2.text = event2
         
         
         
@@ -36,17 +42,6 @@ class ProfileController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     
 }
 extension UIImage{
