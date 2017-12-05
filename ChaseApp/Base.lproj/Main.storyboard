@@ -185,7 +185,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HaD-8g-jqF" id="Ij3-U8-RVl">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -378,12 +378,6 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="99" height="99"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juQ-RE-0oV">
-                                                            <rect key="frame" x="28" y="39" width="42" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                         <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y8F-pq-VAL">
                                                             <rect key="frame" x="29.5" y="29.5" width="40" height="40"/>
                                                             <color key="backgroundColor" red="1" green="0.65867885973833673" blue="0.0010313478113763708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -397,6 +391,12 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="juQ-RE-0oV">
+                                                            <rect key="frame" x="28" y="38.5" width="42" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                 </view>
                                                 <constraints>
@@ -407,6 +407,7 @@
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="dateLabel" destination="juQ-RE-0oV" id="AqC-ab-oP9"/>
+                                                    <outlet property="selectedView" destination="y8F-pq-VAL" id="GbI-p6-KWZ"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>

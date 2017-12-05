@@ -37,7 +37,7 @@ class CalendarController: UIViewController {
 
 }
 
-extension CalendarController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSource {
+extension CalendarController: JTAppleCalendarViewDataSource {
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
         formatter.dateFormat = "yyyy MM dd"
         formatter.timeZone = Calendar.current.timeZone
@@ -51,6 +51,13 @@ extension CalendarController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDa
         return parameters
     }
     
+    func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
+        
+    }
+}
+
+extension CalendarController: JTAppleCalendarViewDelegate{
+    //diusplays the cell
     func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "Cell1", for: indexPath) as! CustomCell
         //self.calendar(<#T##calendar: JTAppleCalendarView##JTAppleCalendarView#>, willDisplay: CustomCell, forItemAt: date, cellState: cellState, indexPath: indexPath)
@@ -58,8 +65,10 @@ extension CalendarController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDa
         return cell
     }
     
-    func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
-        
+    func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState){
+        guard let validCell = cell as? CustomCell else { return }
+        validCell.selectedView.isHidden = false
+        //at 5:02 in the video
     }
 }
 
