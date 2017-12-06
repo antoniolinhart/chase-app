@@ -11,12 +11,24 @@ import JTAppleCalendar
 
 class CalendarController: UIViewController {
 
+    @IBOutlet weak var calendarView: JTAppleCalendarView!
+    
+    //let outsideMonthColor = UIColor(color)//this should let me make colors but its not working, idk why
+    
+    
+    
     let formatter = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupCalendarView()
         // Do any additional setup after loading the view.
+    }
+    
+    func setupCalendarView(){
+        calendarView.minimumLineSpacing = 0
+        calendarView.minimumInteritemSpacing = 0
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,13 +74,24 @@ extension CalendarController: JTAppleCalendarViewDelegate{
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "Cell1", for: indexPath) as! CustomCell
         //self.calendar(<#T##calendar: JTAppleCalendarView##JTAppleCalendarView#>, willDisplay: CustomCell, forItemAt: date, cellState: cellState, indexPath: indexPath)
         cell.dateLabel.text = cellState.text
+        
+        if cellState.isSelected {
+            cell.selectedView.isHidden = false
+        }else{
+            cell.selectedView.isHidden = true
+        }
+        
         return cell
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState){
         guard let validCell = cell as? CustomCell else { return }
         validCell.selectedView.isHidden = false
-        //at 5:02 in the video
+    }
+    
+    func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
+        guard let validCell = cell as? CustomCell else { return }
+        validCell.selectedView.isHidden = true
     }
 }
 

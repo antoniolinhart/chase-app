@@ -429,6 +429,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Calendar" image="calendar" id="eF3-bR-CIc" userLabel="Calendar"/>
+                    <connections>
+                        <outlet property="calendarView" destination="GJo-dg-fGM" id="hjO-iM-QIJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4T5-Ks-5sl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
