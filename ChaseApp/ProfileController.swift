@@ -14,17 +14,24 @@ class ProfileController: UIViewController, UIImagePickerControllerDelegate, UINa
     @IBOutlet weak var userField: UILabel!
     @IBOutlet weak var eventLabel1: UILabel!
     @IBOutlet weak var eventLabel2: UILabel!
+    @IBOutlet weak var friendnameLabel1: UILabel!
+    @IBOutlet weak var friendnameLabel2: UILabel!
+
+    @IBOutlet var profileView: UIView!
 
     var profileImage = "profilepic02.jpg"
     var username = "PairOfPairs"
     var event1 = "December 1st @ 2:00 PM - Meeting at CAPS"
     var event2 = "December 15th @ 1:30 PM - Video Chat with CAPS Students"
+    var friendname1 = "Apple2512"
+    var friendname2 = "Orange6287"
     
     override func viewDidLoad() {
+        profilePic.isUserInteractionEnabled = true
         super.viewDidLoad()
         profilePic.backgroundColor = UIColor.lightGray
         
-        profilePic.image = (UIImage(named:profileImage))
+        //profilePic.image = (UIImage(named:profileImage))
         profilePic.layer.cornerRadius = profilePic.frame.size.width*1/2
         profilePic.layer.borderWidth = 2.5
         profilePic.layer.borderColor = UIColor.black.cgColor
@@ -32,6 +39,8 @@ class ProfileController: UIViewController, UIImagePickerControllerDelegate, UINa
         userField.text = username
         eventLabel1.text = event1
         eventLabel2.text = event2
+        friendnameLabel1.text = friendname1
+        friendnameLabel2.text = friendname2
         
 
     }
@@ -45,12 +54,15 @@ class ProfileController: UIViewController, UIImagePickerControllerDelegate, UINa
         dismiss(animated: true, completion: nil)
     }
     
-    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let controller = UIImagePickerController()
-        controller.delegate = self
-        controller.sourceType = .photoLibrary
-        present(controller, animated: true, completion: nil)
-        
+        let touch: UITouch = touches.first!
+        print(touch.view!)
+            let controller = UIImagePickerController()
+            controller.delegate = self
+            controller.sourceType = .photoLibrary
+            present(controller, animated: true, completion: nil)
+
     }
+ 
 }
